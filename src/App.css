@@ -9,9 +9,7 @@
 }
 
 :root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   --primary: 3, 3, 3;
   --secondary: 249, 249, 249;

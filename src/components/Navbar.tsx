@@ -4,22 +4,26 @@ import { NavLinks, Link } from "../constants";
 
 const Navbar = () => {
   return (
-    <nav className={`w-full flex py-3 justify-center items-center top-0`}>
+    <nav
+      className={`w-full xl:w-5/6 flex justify-between items-center top-0 sm:px-16 px-6`}
+    >
       <img
         src={sakura_omakase_logo}
         alt="Sakura Omakase"
-        className="w-[120px] h-[120px] my-2 relative"
+        className="w-[100px] h-[100px] my-2 relative"
       />
-      <ul className="hidden sm:flex items-center">
-        {NavLinks.map((item: Link) => (
-          <li
-            key={item.id}
-            className="font-fira_sans font-semibold uppercase cursor-pointer text-[12px] text-secondary hover:text-primary/95 mr-10"
-          >
-            <a href={"#"}>{item.title}</a>
-          </li>
-        ))}
-      </ul>
+      <span className="hidden sm:flex">
+        <ul className="list-none flex">
+          {NavLinks.map((item: Link) => (
+            <li
+              key={item.id}
+              className="font-fira_sans font-semibold uppercase cursor-pointer text-[12px] text-secondary hover:text-primary/95 mr-10"
+            >
+              <a href={"#"}>{item.title}</a>
+            </li>
+          ))}
+        </ul>
+      </span>
     </nav>
   );
 };

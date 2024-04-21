@@ -4,9 +4,13 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
-      <Navbar />
-    </>
+    <div
+      className={`w-full relative overflow-hidden leading-relaxed antialiased bg-background`}
+    >
+      <div className="flex justify-center items-center">
+        <Navbar />
+      </div>
+    </div>
   );
 }
 
