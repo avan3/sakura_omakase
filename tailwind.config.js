@@ -13,6 +13,9 @@ export default {
       fontFamily: {
         fira_sans: ["Fira Sans Extra Condensed", "sans-serif"],
       },
+      backgroundImage: {
+        "hero-image": "url('/public/sakura_bg.jpg')",
+      },
     },
     screens: {
       xs: "480px",

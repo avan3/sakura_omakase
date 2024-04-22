@@ -1,6 +1,6 @@
-import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -9,6 +9,9 @@ function App() {
     >
       <div className="flex justify-center items-center">
         <Navbar />
+      </div>
+      <div className="flex justify-center items-center">
+        <Hero />
       </div>
     </div>
   );
