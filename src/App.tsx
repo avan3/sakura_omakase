@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 function App() {
   return (
     <div
-      className={`w-full relative overflow-hidden leading-relaxed antialiased bg-background`}
+      className={`w-full m-auto relative overflow-hidden leading-relaxed antialiased bg-background`}
     >
       <div className="flex justify-center items-center">
         <Navbar />
