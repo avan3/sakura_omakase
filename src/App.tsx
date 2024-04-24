@@ -14,7 +14,7 @@ function App() {
           <Route
             path="/"
             element={
-              <div className="flex justify-center items-center h-full">
+              <div className="flex items-center h-full">
                 {/* <img
           src={cherryBlossom}
           alt="Cherry Blossoms"
