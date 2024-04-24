@@ -1,31 +1,39 @@
 import React from "react";
 import sakura_omakase_logo from "../assets/sakura_omakase_logo_wht.svg";
 import { NavLinks, Link } from "../constants";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav
-      className={`w-full xl:w-5/6 flex justify-between items-center top-0 sm:px-10 px-6`}
+      className={`md:w-[10%] sm:w-[17%] w-[20%] min-w-[120px] h-full flex flex-col justify-between items-center bg-black`}
     >
       <img
         src={sakura_omakase_logo}
         alt="Sakura Omakase"
-        className="w-[100px] h-[100px] my-2 relative"
+        className="w-5/6 my-2"
       />
-      <span className="hidden sm:flex mt-2">
-        <ul className="list-none flex">
-          {NavLinks.map((item: Link, index: number) => (
-            <li
+      <div className="mt-2">
+        <ul className="list-none flex flex-col">
+          {NavLinks.map((item: Link) => (
+            <NavLink
               key={item.id}
-              className={`font-fira_sans font-semibold uppercase cursor-pointer 
-                text-[12px] text-secondary 
-                ${index < NavLinks.length - 1 ? "mr-10" : ""}`}
+              to={item.link}
+              className={({ isActive }) =>
+                [
+                  `font-fira_sans font-semibold uppercase
+                  cursor-pointer text-[12px] text-secondary p-3
+                  hover:text-slate-300`,
+                  isActive ? "border border-white" : "",
+                ].join(" ")
+              }
             >
-              <a href={"#"}>{item.title}</a>
-            </li>
+              {item.title}
+            </NavLink>
           ))}
         </ul>
-      </span>
+      </div>
+      <div>Socials</div>
     </nav>
   );
 };
