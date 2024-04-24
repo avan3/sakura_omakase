@@ -14,7 +14,7 @@ export default {
         fira_sans: ["Fira Sans Extra Condensed", "sans-serif"],
       },
       backgroundImage: {
-        "hero-image": "url('/public/sakura_bg.jpg')",
+        "hero-image": "url('/2527115.jpg')",
       },
     },
     screens: {
@@ -24,6 +24,8 @@ export default {
       md: "1060px",
       lg: "1200px",
       xl: "1700px",
+      xxl: "2000px",
+      xxxl: "2400px",
     },
   },
   plugins: [],
