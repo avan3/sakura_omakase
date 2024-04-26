@@ -13,9 +13,6 @@ export default {
       fontFamily: {
         fira_sans: ["Fira Sans Extra Condensed", "sans-serif"],
       },
-      backgroundImage: {
-        "hero-image": "url('/2527115.jpg')",
-      },
     },
     screens: {
       xs: "480px",
