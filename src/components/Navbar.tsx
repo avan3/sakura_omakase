@@ -29,8 +29,8 @@ const Navbar = () => {
               to={item.link}
               className={({ isActive }) =>
                 [
-                  `font-fira_sans font-semibold uppercase
-                  cursor-pointer text-[13px] xl:text-[17px] xxl:text-[20px] xxxl:text-[25px] text-secondary p-3
+                  `font-fira_sans font-medium uppercase
+                  cursor-pointer text-[13px] xl:text-[17px] xxl:text-[20px] xxxl:text-[25px] text-secondary p-2 sm:p-3
                   hover:text-slate-300`,
                   isActive ? "border border-white" : "",
                 ].join(" ")
