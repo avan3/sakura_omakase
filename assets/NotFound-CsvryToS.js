@@ -1,0 +1,1 @@
+import{j as o}from"./index-CwpV3WBQ.js";import"./vendor-DgDacMBR.js";import"./@fortawesome/react-fontawesome-Cyawhvr6.js";import"./@fortawesome/free-brands-svg-icons-D5ZL7G3x.js";const p=()=>o.jsx("div",{children:"404"});export{p as NotFound};
