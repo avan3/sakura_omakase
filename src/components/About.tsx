@@ -1,4 +1,4 @@
-const About = () => {
+export const About = () => {
   return (
     <>
       Welcome to Sakura Omakase, where culinary artistry meets Japanese
@@ -34,5 +34,3 @@ const About = () => {
     </>
   );
 };
-
-export default About;
