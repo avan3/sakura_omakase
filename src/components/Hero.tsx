@@ -1,11 +1,14 @@
-import omakase_xs from "../assets/omakase_480x281.jpg";
-import omakase_ss from "../assets/omakase_620x364.jpg";
-import omakase_sm from "../assets/omakase_768x450.jpg";
-import omakase_md from "../assets/omakase_1060x622.jpg";
-import omakase_lg from "../assets/omakase_1200x704.jpg";
-import omakase_xl from "../assets/omakase_1700x997.jpg";
+import omakase_xs from "../assets/omakase_480x281.webp";
+import omakase_ss from "../assets/omakase_620x364.webp";
+import omakase_sm from "../assets/omakase_768x450.webp";
+import omakase_md from "../assets/omakase_1060x622.webp";
+import omakase_lg from "../assets/omakase_1200x704.webp";
+import omakase_xl from "../assets/omakase_1700x997.webp";
+import omakase_xxl from "../assets/omakase_2000x1173.webp";
+import omakase_xxxl from "../assets/omakase_2400x1407.webp";
+import omakase_xxxxl from "../assets/omakase_3504x2055.webp";
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <>
       <section className="m-auto max-w-max">
@@ -20,8 +23,11 @@ const Hero = () => {
           Sakura Omakase
         </h3>
       </section>
-      <section className="mx-3 sm:mx-10 my-4">
+      <section className="my-4">
         <picture>
+          <source srcSet={omakase_xxxxl} media="(min-width: 2400px)" />
+          <source srcSet={omakase_xxxl} media="(min-width: 2000px)" />
+          <source srcSet={omakase_xxl} media="(min-width: 1700px)" />
           <source srcSet={omakase_xl} media="(min-width: 1200px)" />
           <source srcSet={omakase_lg} media="(min-width: 1060px)" />
           <source srcSet={omakase_md} media="(min-width: 768px)" />
@@ -31,11 +37,11 @@ const Hero = () => {
             src={omakase_xs}
             alt="Omakase Background"
             className="rounded-sm"
+            width="3504"
+            height="2055"
           />
         </picture>
       </section>
     </>
   );
 };
-
-export default Hero;
