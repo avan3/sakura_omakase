@@ -23,6 +23,7 @@ export default {
       xl: "1700px",
       xxl: "2000px",
       xxxl: "2400px",
+      xxxxl: "3000px",
     },
   },
   plugins: [],
