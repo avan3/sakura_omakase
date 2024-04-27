@@ -4,6 +4,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Hero from "./components/Hero.tsx";
 import Layout from "./components/Layout.tsx";
+import About from "./components/About.tsx";
+import Welcome from "./components/Welcome.tsx";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +14,16 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Hero />,
+        element: (
+          <>
+            <Hero />
+            <Welcome />
+          </>
+        ),
+      },
+      {
+        path: "about",
+        element: <About />,
       },
     ],
   },
