@@ -1,18 +1,26 @@
 import sakura_omakase_logo from "../assets/sakura_omakase_logo_wht.svg";
 import { NavLinks, Link } from "../constants";
 import { NavLink } from "react-router-dom";
-import { FaInstagram, FaXTwitter, FaYelp } from "react-icons/fa6";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faXTwitter,
+  faInstagram,
+  faYelp,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
   return (
     <nav
       className={`md:w-[10%] sm:w-[17%] xs:w-[120px] w-[100px] h-full fixed flex flex-col justify-between items-center bg-black`}
     >
-      <img
-        src={sakura_omakase_logo}
-        alt="Sakura Omakase"
-        className="w-5/6 my-2"
-      />
+      <div className="w-5/6 my-2">
+        <img
+          src={sakura_omakase_logo}
+          alt="Sakura Omakase"
+          width="320"
+          height="360"
+        />
+      </div>
       <div className="mt-2">
         <ul className="list-none flex flex-col">
           {NavLinks.map((item: Link) => (
@@ -34,24 +42,33 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="flex mb-4 xl:mb-5 xxl:mb-6 xxxl:mb-7 gap-3 xxxl:gap-4">
-        {/* <a
+        <a
           href="https://www.instagram.com/"
           className="text-white hover:text-slate-300"
         >
-          <FaInstagram className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8" />
+          <FontAwesomeIcon
+            icon={faInstagram}
+            className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8"
+          />
         </a>
         <a
           href="https://twitter.com/"
           className="text-white hover:text-slate-300"
         >
-          <FaXTwitter className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8" />
+          <FontAwesomeIcon
+            icon={faXTwitter}
+            className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8"
+          />
         </a>
         <a
           href="https://www.yelp.com/"
           className="text-white hover:text-slate-300"
         >
-          <FaYelp className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8" />
-        </a> */}
+          <FontAwesomeIcon
+            icon={faYelp}
+            className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8"
+          />
+        </a>
       </div>
     </nav>
   );
