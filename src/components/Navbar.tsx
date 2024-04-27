@@ -1,4 +1,3 @@
-import React from "react";
 import sakura_omakase_logo from "../assets/sakura_omakase_logo_wht.svg";
 import { NavLinks, Link } from "../constants";
 import { NavLink } from "react-router-dom";
@@ -35,7 +34,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="flex mb-4 xl:mb-5 xxl:mb-6 xxxl:mb-7 gap-3 xxxl:gap-4">
-        <a
+        {/* <a
           href="https://www.instagram.com/"
           className="text-white hover:text-slate-300"
         >
@@ -52,7 +51,7 @@ const Navbar = () => {
           className="text-white hover:text-slate-300"
         >
           <FaYelp className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8" />
-        </a>
+        </a> */}
       </div>
     </nav>
   );

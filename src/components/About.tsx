@@ -1,11 +1,9 @@
-import React from "react";
-
 const About = () => {
   return (
-    <div>
+    <>
       Welcome to Sakura Omakase, where culinary artistry meets Japanese
-      tradition in every dish. Nestled in the heart of [City/Town], we invite
-      you on a journey of exquisite flavors and unparalleled dining experiences.
+      tradition in every dish. Nestled in the heart of Toronto, we invite you on
+      a journey of exquisite flavors and unparalleled dining experiences.
       <br />
       At Sakura Omakase, we specialize in the time-honored tradition of omakase,
       where our skilled chefs curate an unforgettable meal tailored to your
@@ -33,7 +31,7 @@ const About = () => {
       and every meal is a celebration of artistry and tradition.
       <br />
       Indulge in the elegance of omakase dining. Indulge in Sakura Omakase.
-    </div>
+    </>
   );
 };
 
