@@ -2,10 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Hero from "./components/Hero.tsx";
-import Layout from "./components/Layout.tsx";
-import About from "./components/About.tsx";
-import Welcome from "./components/Welcome.tsx";
+import { Layout } from "./components/Layout.tsx";
+import { Index } from "./components/Index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,18 +12,23 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: (
-          <>
-            <Hero />
-            <Welcome />
-          </>
-        ),
+        element: <Index />,
       },
       {
         path: "about",
-        element: <About />,
+        async lazy() {
+          const { About } = await import("./components/About.tsx");
+          return { Component: About };
+        },
       },
     ],
+  },
+  {
+    path: "*",
+    async lazy() {
+      const { NotFound } = await import("./components/NotFound.tsx");
+      return { Component: NotFound };
+    },
   },
 ]);
 
