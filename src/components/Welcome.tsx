@@ -1,4 +1,5 @@
 import restaurant from "../assets/restaurant_view.webp";
+
 export const Welcome = () => {
   return (
     <section className="flex flex-col md:flex-row md:my-6 justify-center items-center">
