@@ -79,15 +79,15 @@ export const Contact = () => {
       </section>
       <section className="md:basis-1/2 my-3 w-full">
         <iframe
-          className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] xxl:h-[700px] xxxxl:h-[800px]"
+          className="w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] xxl:h-[650px] xxxl:h-[700px] xxxxl:h-[800px]"
           src="https://www.openstreetmap.org/export/embed.html?bbox=-79.36692684888841%2C43.64823175734573%2C-79.36392813920975%2C43.65076059585416&amp;layer=mapnik"
         ></iframe>
         <br />
-        {/* <small>
+        <small>
           <a href="https://www.openstreetmap.org/#map=19/43.64950/-79.36543&amp;layers=N">
             View Larger Map
           </a>
-        </small> */}
+        </small>
       </section>
     </section>
   );
