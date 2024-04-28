@@ -2,8 +2,10 @@ export const Contact = () => {
   return (
     <section className="flex flex-col md:flex-row md:my-6 justify-center items-center">
       <section className="md:basis-1/2 my-3 mx-4 text-left font-fira_sans md:text-lg lg:text-xl xl:text-3xl xxxl:text-4xl xxxxl:text-5xl">
-        <h3 className="font-semibold text-[2.5rem] text-center">Contact Us</h3>
-        <p className="mt-5">
+        <h3 className="font-semibold text-[48px] xs:text-[50px] sm:text-[64px] lg:text-[76px] text-center">
+          Contact Us
+        </h3>
+        <p className="mt-5 md:mt-8">
           <span className="font-medium text-lg md:text-xl lg:text-2xl xl:text-3xl xxxl:text-4xl xxxxl:text-5xl">
             Thank you
           </span>
