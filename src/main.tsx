@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "./components/Layout.tsx";
 import { Index } from "./components/Index.tsx";
+import { NotFound } from "./components/NotFound.tsx";
 
 const router = createBrowserRouter(
   [
@@ -22,14 +23,18 @@ const router = createBrowserRouter(
             return { Component: About };
           },
         },
+        {
+          path: "contact",
+          async lazy() {
+            const { Contact } = await import("./components/Contact.tsx");
+            return { Component: Contact };
+          },
+        },
       ],
     },
     {
       path: "*",
-      async lazy() {
-        const { NotFound } = await import("./components/NotFound.tsx");
-        return { Component: NotFound };
-      },
+      element: <NotFound />,
     },
   ],
   { basename: "/sakura_omakase/" }
