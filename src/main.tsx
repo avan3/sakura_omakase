@@ -24,11 +24,31 @@ const router = createBrowserRouter(
           },
         },
         {
+          path: "menu",
+          async lazy() {
+            const { Menu } = await import("./components/Menu.tsx");
+            return { Component: Menu };
+          },
+        },
+        {
+          path: "reservations",
+          async lazy() {
+            const { Reservations } = await import(
+              "./components/Reservations.tsx"
+            );
+            return { Component: Reservations };
+          },
+        },
+        {
           path: "contact",
           async lazy() {
             const { Contact } = await import("./components/Contact.tsx");
             return { Component: Contact };
           },
+        },
+        {
+          path: "*",
+          element: <NotFound />,
         },
       ],
     },
