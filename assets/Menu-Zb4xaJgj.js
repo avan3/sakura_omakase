@@ -1,0 +1,1 @@
+import{j as r}from"./index-BWhyZVkc.js";import"./vendor-DgDacMBR.js";import"./@fortawesome/react-fontawesome-Cyawhvr6.js";import"./@fortawesome/free-brands-svg-icons-D5ZL7G3x.js";const m=()=>r.jsx("div",{children:"Menu"});export{m as Menu};
