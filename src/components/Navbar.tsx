@@ -14,12 +14,14 @@ const Navbar = () => {
       className={`md:w-[10%] sm:w-[17%] xs:w-[120px] w-[100px] h-full fixed flex flex-col justify-between items-center bg-black`}
     >
       <div className="w-5/6 my-2">
-        <img
-          src={sakura_omakase_logo}
-          alt="Sakura Omakase"
-          width="320"
-          height="360"
-        />
+        <a href="/">
+          <img
+            src={sakura_omakase_logo}
+            alt="Sakura Omakase"
+            width="320"
+            height="360"
+          />
+        </a>
       </div>
       <div className="mt-2">
         <ul className="list-none flex flex-col">
@@ -30,11 +32,11 @@ const Navbar = () => {
               className={({ isActive }) =>
                 [
                   `font-fira_sans font-medium uppercase
-                  cursor-pointer text-[13px] xl:text-[17px] xxl:text-[20px] xxxl:text-[25px] text-secondary p-2 sm:p-3
+                  text-[13px] xl:text-[17px] xxl:text-[20px] xxxl:text-[25px] text-secondary p-2 sm:p-3
                   hover:text-slate-300`,
                   isActive
                     ? "border border-white cursor-default hover:text-white"
-                    : "",
+                    : "cursor-pointer",
                 ].join(" ")
               }
             >
