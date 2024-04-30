@@ -5,7 +5,7 @@ export const Menu = () => {
         <h3 className="font-semibold text-[48px] xs:text-[50px] sm:text-[64px] lg:text-[76px] text-center">
           Menu
         </h3>
-        <p className="mt-8 font-semibold text-lg sm:text-xl md:text-2xl xl:text-4xl xxxl:text-5xl xxxxl:text-6xl">
+        <p className="mt-4 md:mt-10 font-semibold text-lg sm:text-xl md:text-2xl xl:text-4xl xxxl:text-5xl xxxxl:text-6xl">
           Appetizer
         </p>
         <ul className="text-md sm:text-lg md:text-xl xl:text-3xl xxxl:text-4xl xxxxl:text-5xl">

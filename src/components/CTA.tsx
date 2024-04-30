@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export const CTA = () => {
   return (
-    <section className="flex flex-col md:flex-row md:my-6 justify-center items-center">
+    <section className="flex flex-col md:my-6 justify-center items-center">
       <section className="my-3 mx-4">
         <h1 className="text-[48px] xs:text-[50px] sm:text-[64px] lg:text-[76px] xl:text-[90px] font-semibold font-fira_sans leading-[62.2px] xs:leading-[70.4px] sm:leading-[88.6px] lg:leading-[100.8px]">
           Experience the Essence of Japan
