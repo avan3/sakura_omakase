@@ -14,14 +14,14 @@ const Navbar = () => {
       className={`md:w-[10%] sm:w-[17%] xs:w-[120px] w-[100px] h-full fixed flex flex-col justify-between items-center bg-black`}
     >
       <div className="w-5/6 my-2">
-        <a href="/">
+        <NavLink key="main" to="/">
           <img
             src={sakura_omakase_logo}
             alt="Sakura Omakase"
             width="320"
             height="360"
           />
-        </a>
+        </NavLink>
       </div>
       <div className="mt-2">
         <ul className="list-none flex flex-col">
