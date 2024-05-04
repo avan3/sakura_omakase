@@ -4,26 +4,27 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { Reservation } from "../types/Reservation";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   children?: ReactNode;
-  reservation: Reservation;
   increment: () => void;
   decrement: () => void;
+  disableIncrement: boolean;
+  disableDecrement: boolean;
 }
 
 export const Input = ({
   name,
   children,
-  reservation,
   increment,
   decrement,
+  disableDecrement,
+  disableIncrement,
 }: InputProps) => {
   return (
     <div className="basis-2/3 w-full flex justify-center items-center">
       <div className="flex justify-center items-center flex-1">
-        <button onClick={decrement}>
+        <button onClick={decrement} disabled={disableIncrement}>
           <FontAwesomeIcon
             icon={faChevronLeft}
             className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8"
@@ -31,10 +32,9 @@ export const Input = ({
         </button>
         <div className="flex flex-col justify-center items-center basis-1/3">
           <div>{children}</div>
-          <div>{reservation.datetime.getDate()}</div>
-          <div>{name}</div>
+          <div className="opacity-25">{name}</div>
         </div>
-        <button onClick={increment}>
+        <button onClick={increment} disabled={disableDecrement}>
           <FontAwesomeIcon
             icon={faChevronRight}
             className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8"
