@@ -14,7 +14,7 @@ export const CTA = () => {
           <NavLink
             key="menu"
             to="/menu"
-            className={`font-fira_sans font-medium uppercase bg-black
+            className={`font-fira_sans font-medium bg-black hover:opacity-25
           cursor-pointer text-[17px] xl:text-[21px] xxl:text-[25px] xxxl:text-[30px] 
           text-secondary py-4 px-12 xl:py-5 xl:px-14`}
           >
