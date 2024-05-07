@@ -9,8 +9,8 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   children?: ReactNode;
   increment: () => void;
   decrement: () => void;
-  disableIncrement: boolean;
   disableDecrement: boolean;
+  disableIncrement?: boolean;
 }
 
 export const Input = ({
@@ -24,7 +24,11 @@ export const Input = ({
   return (
     <div className="basis-2/3 w-full flex justify-center items-center">
       <div className="flex justify-center items-center flex-1">
-        <button onClick={decrement} disabled={disableIncrement}>
+        <button
+          className="disabled:opacity-25"
+          onClick={decrement}
+          disabled={disableDecrement}
+        >
           <FontAwesomeIcon
             icon={faChevronLeft}
             className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8"
@@ -34,7 +38,11 @@ export const Input = ({
           <div>{children}</div>
           <div className="opacity-25">{name}</div>
         </div>
-        <button onClick={increment} disabled={disableDecrement}>
+        <button
+          className="disabled:opacity-25"
+          onClick={increment}
+          disabled={disableIncrement}
+        >
           <FontAwesomeIcon
             icon={faChevronRight}
             className="w-5 h-5 xl:w-6 xl:h-6 xxl:w-7 xxl:h-7 xxxl:w-8 xxxl:h-8"
