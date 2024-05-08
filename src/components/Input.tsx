@@ -14,7 +14,6 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const Input = ({
-  name,
   children,
   increment,
   decrement,
@@ -35,8 +34,7 @@ export const Input = ({
           />
         </button>
         <div className="flex flex-col justify-center items-center basis-1/3">
-          <div>{children}</div>
-          <div className="opacity-25">{name}</div>
+          {children}
         </div>
         <button
           className="disabled:opacity-25"
