@@ -8,6 +8,11 @@ type Step2Props = {
   setFormStep: Dispatch<SetStateAction<number>>;
 };
 
+const generateNextOptions = () => {
+  // TODO: generate options for the next 15 minute interval randomly
+  const random = Math.random();
+};
+
 export const Step2 = ({ date, guests, setFormStep }: Step2Props) => {
   return (
     <div className="w-full min-h-[40px] text-white">
@@ -40,7 +45,12 @@ export const Step2 = ({ date, guests, setFormStep }: Step2Props) => {
           Select a time at Sakura Omakase
         </p>
       </div>
-      <div className="py-3 bg-black">asdf</div>
+      <div className="py-3 bg-black flex">
+        <button type="button">Option 1</button>
+        <button type="button">Option 2</button>
+        <button type="button">Option 3</button>
+        <button type="button">Option 4</button>
+      </div>
     </div>
   );
 };
