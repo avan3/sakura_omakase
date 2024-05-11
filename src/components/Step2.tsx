@@ -11,12 +11,15 @@ type Step2Props = {
 const generateNextOptions = () => {
   // TODO: generate options for the next 15 minute interval randomly
   const random = Math.random();
+  return [];
 };
+
+const OPTIONS = generateNextOptions();
 
 export const Step2 = ({ date, guests, setFormStep }: Step2Props) => {
   return (
-    <div className="w-full min-h-[40px] text-white">
-      <div className="py-3 bg-[#00b496]">
+    <div className="w-full max-w-[500px] text-white my-4">
+      <div className="py-3 bg-[#00b496] min-h-[40px]">
         <div className="float-left px-3">
           <button type="button" onClick={() => setFormStep((prev) => prev - 1)}>
             <FontAwesomeIcon
@@ -44,12 +47,39 @@ export const Step2 = ({ date, guests, setFormStep }: Step2Props) => {
         <p className="font-fira_sans text-2xl text-center">
           Select a time at Sakura Omakase
         </p>
-      </div>
-      <div className="py-3 bg-black flex">
-        <button type="button">Option 1</button>
-        <button type="button">Option 2</button>
-        <button type="button">Option 3</button>
-        <button type="button">Option 4</button>
+        <div className="py-3 grid grid-cols-2 justify-between w-[95%] m-auto">
+          {OPTIONS.map((option) => (
+            <button>asdf</button>
+          ))}
+          <button
+            type="button"
+            className="text-center bg-[#34675d] m-2 hover:text-slate-300 rounded-sm text-[18px] leading-5 py-2"
+          >
+            <p>5:00pm</p>
+            <p>À La Carte</p>
+          </button>
+          <button
+            type="button"
+            className="text-center bg-[#34675d] m-2 hover:text-slate-300 rounded-sm text-[18px] leading-5 py-2"
+          >
+            <p>5:15pm</p>
+            <p>À La Carte</p>
+          </button>
+          <button
+            type="button"
+            className="text-center bg-[#34675d] m-2 hover:text-slate-300 rounded-sm text-[18px] leading-5 py-2"
+          >
+            <p>5:30pm</p>
+            <p>À La Carte</p>
+          </button>
+          <button
+            type="button"
+            className="text-center bg-[#34675d] m-2 hover:text-slate-300 rounded-sm text-[18px] leading-5 py-2"
+          >
+            <p>5:45pm</p>
+            <p>À La Carte</p>
+          </button>
+        </div>
       </div>
     </div>
   );
