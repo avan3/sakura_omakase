@@ -17,7 +17,7 @@ export const Form = () => {
   return (
     <form noValidate onSubmit={(e) => e.preventDefault()}>
       <div
-        className="mt-12 md:mt-20 h-[320px] flex flex-col justify-center items-center 
+        className="mt-12 md:mt-20 flex flex-col justify-center items-center 
         text-center divide-y divide-black border-t border-b border-black"
       >
         {formStep == 0 && (
