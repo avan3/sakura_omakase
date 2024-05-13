@@ -86,7 +86,6 @@ export const Step1 = ({
   }
   return (
     <>
-      <pre>{JSON.stringify(watch(), null, 2)}</pre>
       {/* Increment or decrement by 1 day */}
       <Input
         increment={incrementDate}
@@ -139,7 +138,7 @@ export const Step1 = ({
           <button
             className={`font-fira_sans font-medium bg-black hover:opacity-25
                 cursor-pointer text-[17px] xl:text-[21px] xxl:text-[25px] xxxl:text-[30px] 
-                text-secondary w-2/3 p-1`}
+                text-secondary w-2/3 py-2 my-3`}
             type="button"
             onClick={() => setFormStep((prev) => prev + 1)}
           >
