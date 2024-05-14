@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useCallback } from "react";
 import { Input } from "./Input";
-import { useForm } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 
 type Step1Props = {
   currentDateTime: Date;
@@ -19,7 +19,7 @@ export const Step1 = ({
   setGuests,
   setFormStep,
 }: Step1Props) => {
-  const { watch, setValue } = useForm({ defaultValues: { date, guests } });
+  const { watch, setValue } = useFormContext();
 
   // Increment or decrement date
   const addDays = useCallback(
