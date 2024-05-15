@@ -104,6 +104,7 @@ export const Step2 = ({ date, guests, setFormStep }: Step2Props) => {
             />
           </button>
         </div>
+        {showAccordian && <div className="py-3 bg-slate-200">Other dates</div>}
       </div>
     </div>
   );
