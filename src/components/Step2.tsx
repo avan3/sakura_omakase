@@ -46,7 +46,7 @@ export const Step2 = ({ date, guests, setFormStep }: Step2Props) => {
 
   const OPTIONS = useMemo(() => generateNextOptions(), [generateNextOptions]);
   return (
-    <div className="w-full max-w-[90%] text-white my-4">
+    <div className="w-full max-w-[90%] text-white my-4 overflow-scroll max-h-[720px]">
       <div className="py-3 bg-[#00b496] min-h-[40px] relative">
         <button
           type="button"
@@ -104,7 +104,92 @@ export const Step2 = ({ date, guests, setFormStep }: Step2Props) => {
             />
           </button>
         </div>
-        {showAccordian && <div className="py-3 bg-slate-200">Other dates</div>}
+        {showAccordian && (
+          <div className="bg-white text-black">
+            <section className="pt-2">
+              <p className="text-left mx-6 text-[22px]">Thursday, May 16</p>
+              <div className="grid grid-cols-5">
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+              </div>
+              <hr className="h-px mt-3 bg-slate-300 border-0 dark:bg-gray-700"></hr>
+            </section>
+            <section className="pt-2">
+              <p className="text-left mx-6 text-[22px]">Friday, May 17</p>
+              <div className="grid grid-cols-5">
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+                <button
+                  type="button"
+                  className="text-center bg-[#34675d] text-white m-2 hover:brightness-90 hover:text-slate-200 rounded-sm text-[18px] leading-6 py-2"
+                >
+                  <p>6:45pm</p>
+                  <p className="opacity-50 text-[16px]">À La Carte</p>
+                </button>
+              </div>
+              <hr className="h-px mt-3 bg-slate-300 border-0 dark:bg-gray-700"></hr>
+            </section>
+          </div>
+        )}
       </div>
     </div>
   );
